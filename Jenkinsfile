@@ -15,7 +15,12 @@ pipeline {
                     echo 'Now Archiving ....'
 
                     archiveArtifacts artifacts : '**/*.war'
+                   
                 }
+                post{
+                    sucess{
+                    build job : 'Deploy-StagingArea-Piple'
+                    }
             }
         }
     }
