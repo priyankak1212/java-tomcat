@@ -17,11 +17,11 @@ pipeline {
                     archiveArtifacts artifacts : '**/*.war'
                    
                 }
-                post{
-                    sucess{
+                
+                    success{
                     build job : 'Deploy-StagingArea-Piple'
-                    }
-            }
+                    
+                     }
             }
         }
     }
