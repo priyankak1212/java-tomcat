@@ -1,26 +1,21 @@
-pipeline {
+ipeline {
     agent any
     stages {
         stage ('Build Servlet Project') {
             steps {
-             
-               sh  'mvn clean package'
+                /*For windows machine */
+               bat  'mvn clean package'
+
+                /*For Mac & Linux machine */
+               // sh  'mvn clean package'
             }
 
             post{
                 success{
                     echo 'Now Archiving ....'
 
-                    archiveArtifacts artifacts : '**/target/*.war'
+                    archiveArtifacts artifacts : '**/*.war'
                 }
-            }
-        }
-
-        stage ('Deploy Build in Staging Area'){
-            steps{
-
-                build job : 'Deploy-StagingArea-Piple'
-
             }
         }
     }
