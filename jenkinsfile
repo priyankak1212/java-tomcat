@@ -23,10 +23,13 @@ pipeline {
                     build job : 'Deploy-StagingArea-Piple'
                     
                      }
+               }
                      
-                always{ 
+                post{ 
+                   success{
                      build job : 'Deploy-Production-Pipeline'
                      }
+                   }  
                 
             }
         }
