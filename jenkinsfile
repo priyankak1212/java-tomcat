@@ -23,14 +23,11 @@ pipeline {
                     build job : 'Deploy-StagingArea-Piple'
                     
                      }
-               }
-                     
-                post{ 
-                   success{
-                     build job : 'Deploy-Production-Pipeline'
+                     success{
+                      build job : 'Deploy-Production-Pipeline' 
+                    
                      }
-                   }  
-                
+               } 
             }
         }
     }
