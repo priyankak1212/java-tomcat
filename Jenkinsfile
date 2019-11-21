@@ -22,6 +22,7 @@ pipeline {
                     build job : 'Deploy-StagingArea-Piple'
                     }
             }
+            }
         }
     }
 }
