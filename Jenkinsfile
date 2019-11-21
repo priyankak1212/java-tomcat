@@ -18,12 +18,11 @@ pipeline {
                    
                 }
                 
-                post{
-                    success{
+                steps{
+                   
                     build job : 'Deploy-StagingArea-Piple'
                     
-                    } 
-                    }
+                     }
             }
         }
     }
