@@ -23,7 +23,7 @@ pipeline {
                     build job : 'Deploy-StagingArea-Piple'
                     
                      }
-                     success{
+                     changed{
                       build job : 'Deploy-Production-Pipeline' 
                     
                      }
