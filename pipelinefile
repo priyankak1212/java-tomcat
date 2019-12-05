@@ -22,5 +22,11 @@ pipeline {
                build job: 'deploy_staging_pipeline'        
             }
          }
+         stage ('Deploy build in production area'){
+            steps {
+               
+               build job: 'deploy_production_pipeline'        
+            }
+         }
     }
  } 
