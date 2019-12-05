@@ -21,6 +21,7 @@ pipeline {
                
                build job: deploy_staging_pipeline        
             }
-          }
+         }
     }
-   
+  }
+ } 
