@@ -16,7 +16,7 @@ pipeline {
                 }  
               } 
            }    
-         stage ('Deploy build in staging area')
+         stage ('Deploy build in staging area'){
             steps {
                
                build job: 'deploy_staging_pipeline'        
